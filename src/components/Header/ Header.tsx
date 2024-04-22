@@ -72,11 +72,15 @@ export function Header() {
                   <a
                      href="https://api.whatsapp.com/send?phone=5583999533314&text=Hello, more information!"
                      target="_blank"
-                     className="button button__smal"
+                     className="button button__small  button__gray"
                   >
                      <i className="ri-whatsapp-line"></i>
                   </a>
-                  <a href="" target="_blank" className="button button__smal">
+                  <a
+                     href=""
+                     target="_blank"
+                     className="button button__small button__gray"
+                  >
                      <i className="ri-messenger-line"></i>
                   </a>
                </div>
