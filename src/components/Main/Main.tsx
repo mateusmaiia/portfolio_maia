@@ -6,7 +6,20 @@ import Project4 from '../../assets/img/project4.jpg';
 import './styles.css';
 
 export function Main() {
-   // const { Project1, Project2, Project3, Project4 } = images;
+   const tabs = document.querySelectorAll('[data-target]');
+   const tabContents = document.querySelectorAll('[data-content]');
+
+   tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+         const target = document.querySelector(tab.dataset.target);
+
+         tabContents.forEach((tc) => () => {
+            tc.classList.remove('filters__active');
+         });
+         target.classList.add('filters__active');
+      });
+   });
+
    return (
       <main className="main">
          <section className="filters container">
@@ -23,7 +36,7 @@ export function Main() {
                {/* projects */}
                <div
                   data-content
-                  className="projects__content grid filters__active"
+                  className="projects__content grid "
                   id="projects"
                >
                   <article className="projects__card">
